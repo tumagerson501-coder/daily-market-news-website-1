@@ -10,16 +10,49 @@ const MARKET_DATA = {
     // 📰 C. DAILY NEWS SECTION (3 Items Example)
     news: [
         {
-            headline: "US Core Retail Sales Exceed Expectations",
-            explanation: "Retail data dropped 0.4% higher than forecasted, signaling strong consumer demand and giving the Federal Reserve room to sustain elevated interest rates.",
-            imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500", 
-            videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
-            marketAffected: "USD, US30",
-            timePosted: "08:30 AM"
+            headline: "DSE summary on 26th market performance",
+            explanation: `1. On February 27, 2026, the Dar es Salaam Stock Exchange achieved an equities turnover of TZS 24.06 billion and a massive government bond trading value of TZS 76.46 billion.
+                          2. Major commercial bank counters like CRDB, KCB, and NMB heavily dominated the daily equity trading volumes and block transactions.
+                          3. Key indicators closed strong, bringing the total market capitalization to TZS 34,636.64 billion with an All Share Index (DSEI) of 3,986.77.`,
+            imageUrl: "./images/dse.png", 
+            videoUrl: "https://youtu.be/i6TV_Szv7rg?si=T3cSgXpX7RmGK4tD", 
+            marketAffected: `
+*Official Bank of Tanzania (BoT) Mean Exchange Rates
+
+    -USD to TZS: 2,546.74 
+    -KES to TZS: 19.73 
+    -GBP to TZS: 3,450.8`,
+            timePosted: "yesterday 26th."
         },
         {
             headline: "Gold Plummets as Treasury Yields Climb",
-            explanation: "As global bond yields spike, non-yielding Gold is facing heavy institutional liquidations, violently breaking past the psychological $2,300 support handle.",
+            explanation: `### Summary of the Bank of Tanzania Public Notice (26 May 2026)
+
+The **Bank of Tanzania (BoT)** announced that it intervened in the **Interbank Foreign Exchange Market (IFEM)** under its **Foreign Exchange Intervention Policy, 2023**.
+
+#### Key Points:
+
+* The BoT sold **USD 28.75 million** through a foreign exchange auction.
+* The purpose was to **increase liquidity** in the foreign exchange market.
+* The **weighted average exchange rate** was:
+
+  * **TZS 2,619.31 per USD**
+
+#### Auction Results:
+
+* **Currency:** USD
+* **Initially Offered Amount:** USD 20 million
+* **Total Tendered Amount:** USD 28.75 million
+* **Successful Amount Sold:** USD 28.75 million
+* **Highest Bid Rate:** TZS 2,630/USD
+* **Lowest Bid Rate:** TZS 2,610/USD
+* **Banks Participated:** 21
+* **Banks Accepted:** 21
+
+#### Meaning:
+
+This intervention shows that the central bank is actively supporting the foreign exchange market by supplying U.S. dollars to commercial banks, helping stabilize liquidity and exchange rate pressures in Tanzania.
+`,
             imageUrl: "https://images.unsplash.com/photo-1610374792793-f016b77ca51a?w=500", 
             videoUrl: "", // No video for this one
             marketAffected: "XAUUSD",
