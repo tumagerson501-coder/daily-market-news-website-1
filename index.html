@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Daily Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">Market<span>Hub</span></div>
+        <nav class="nav-links">
+            <a href="#summary">Home</a>
+            <a href="#news">News</a>
+            <a href="#insights">Insights</a>
+            <a href="#notes">Trader Notes</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="summary" class="section-card hero-section">
+            <h2>Today's Market Overview (<span id="current-date"></span>)</h2>
+            <ul id="summary-list" class="summary-list"></ul>
+        </section>
+
+        <section id="news" class="content-section">
+            <h2 class="section-title">Daily Market News</h2>
+            <div id="news-container" class="cards-grid"></div>
+        </section>
+
+        <section id="insights" class="content-section">
+            <h2 class="section-title">Market Insights</h2>
+            <div id="insights-container" class="cards-grid"></div>
+        </section>
+
+        <section id="notes" class="content-section">
+            <h2 class="section-title">Trader Notes & Warnings</h2>
+            <div id="notes-container" class="notes-grid"></div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
