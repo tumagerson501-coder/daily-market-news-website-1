@@ -53,10 +53,10 @@ The **Bank of Tanzania (BoT)** announced that it intervened in the **Interbank F
 
 This intervention shows that the central bank is actively supporting the foreign exchange market by supplying U.S. dollars to commercial banks, helping stabilize liquidity and exchange rate pressures in Tanzania.
 `,
-            imageUrl: "https://images.unsplash.com/photo-1610374792793-f016b77ca51a?w=500", 
+            imageUrl: "https://www.bot.go.tz/img/slider/2026031309301635.jpg", 
             videoUrl: "", // No video for this one
-            marketAffected: "XAUUSD",
-            timePosted: "10:15 AM"
+            marketAffected: "",
+            timePosted: "may 27 2026"
         },
         {
             headline: "Crypto Liquidations Cross $200M Within 2 Hours",
