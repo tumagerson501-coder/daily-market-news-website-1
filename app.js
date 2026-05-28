@@ -1,85 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
-    // Helper function to build Image and Video HTML safely
-    function createMediaHtml(imageUrl, videoUrl, title) {
-        let html = "";
-        if (imageUrl && imageUrl.trim() !== "") {
-            html += `<img src="${imageUrl}" alt="${title}" class="card-image">`;
-        }
-        if (videoUrl && videoUrl.trim() !== "") {
-            html += `
-                <a href="${videoUrl}" target="_blank" class="video-btn">
-                    📺 Watch Video Breakdown
-                </a>`;
-        }
-        return html;
-    }
+// LOAD NEWS ARTICLES
 
-    // 1. Set Date & Load Summary Highlights
-    document.getElementById("current-date").textContent = MARKET_DATA.date;
-    const summaryList = document.getElementById("summary-list");
-    MARKET_DATA.summary.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        summaryList.appendChild(li);
-    });
+const newsContainer = document.getElementById('news-container');
 
-    // 2. Load and Build Daily News Section (Multi-Grid)
-    const newsContainer = document.getElementById("news-container");
-    MARKET_DATA.news.forEach(item => {
-        const card = document.createElement("div");
-        card.className = "card";
-        
-        const mediaHtml = createMediaHtml(item.imageUrl, item.videoUrl, item.headline);
+function loadNews() {
+    newsContainer.innerHTML = '';
+
+    newsData.forEach(news => {
+        const card = document.createElement('div');
+        card.classList.add('news-card');
 
         card.innerHTML = `
-            <div>
-                ${mediaHtml}
-                <h3 class="news-headline" style="${item.imageUrl ? 'margin-top: 0.5rem;' : ''}">${item.headline}</h3>
-                <p class="news-explanation">${item.explanation}</p>
-            </div>
-            <div class="meta-footer">
-                <span>Asset: <strong>${item.marketAffected}</strong></span>
-                <span>${item.timePosted}</span>
+            <img src="${news.image}" alt="news image">
+            <div class="news-content">
+                <h3>${news.title}</h3>
+                <p>${news.description}</p>
+                <a href="${news.link}" target="_blank">Read More</a>
             </div>
         `;
+
         newsContainer.appendChild(card);
     });
+}
 
-    // 3. Load and Build Insights Section (Multi-Grid)
-    const insightsContainer = document.getElementById("insights-container");
-    MARKET_DATA.insights.forEach(item => {
-        const directionClass = item.direction.toLowerCase();
-        const card = document.createElement("div");
-        card.className = "card";
-        
-        const mediaHtml = createMediaHtml(item.imageUrl, item.videoUrl, item.market);
+loadNews();
 
-        card.innerHTML = `
-            <div>
-                <span class="badge ${directionClass}">${item.direction}</span>
-                ${mediaHtml}
-                <h3 style="margin: 0.5rem 0;">${item.market}</h3>
-                <p class="news-explanation">${item.reason}</p>
-                <div class="insight-levels">${item.keyLevels}</div>
-            </div>
-            <p class="risk-alert">⚠️ <strong>Risk Warning:</strong> ${item.riskWarning}</p>
-        `;
-        insightsContainer.appendChild(card);
-    });
+// COMMENT SYSTEM CODE SAVER
 
-    // 4. Load Trader Notes Section (Side-by-Side Multi Grid Layout)
-    const notesContainer = document.getElementById("notes-container");
-    MARKET_DATA.traderNotes.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "note-item";
-        
-        const mediaHtml = createMediaHtml(item.imageUrl, item.videoUrl, "Trader Note");
+const showCommentBox = document.getElementById('showCommentBox');
+const commentCodeArea = document.getElementById('commentCodeArea');
+const saveCodeBtn = document.getElementById('saveCodeBtn');
+const customCommentSystem = document.getElementById('customCommentSystem');
 
-        div.innerHTML = `
-            <p>"${item.note}"</p>
-            ${mediaHtml ? `<div class="note-media-box">${mediaHtml}</div>` : ''}
-        `;
-        notesContainer.appendChild(div);
-    });
+showCommentBox.addEventListener('click', () => {
+    commentCodeArea.style.display = 'block';
+});
+
+saveCodeBtn.addEventListener('click', () => {
+    const code = document.querySelector('.comment-section textarea').value;
+
+    customCommentSystem.innerHTML = code;
+
+    localStorage.setItem('commentSystemCode', code);
+});
+
+// LOAD SAVED COMMENT CODE
+window.addEventListener('load', () => {
+    const savedCode = localStorage.getItem('commentSystemCode');
+
+    if(savedCode){
+        customCommentSystem.innerHTML = savedCode;
+    }
 });

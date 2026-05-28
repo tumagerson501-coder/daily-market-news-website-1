@@ -17,56 +17,39 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">Market<span>Hub</span></div>
-        <nav class="nav-links">
-            <a href="#summary">Home</a>
-            <a href="#news">News</a>
-            <a href="#insights">Insights</a>
-            <a href="#notes">Trader Notes</a>
-        </nav>
+     <header>
+        <div class="container">
+            <h1>Daily News Hub</h1>
+            <p>Latest Daily Updates Around the World</p>
+        </div>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Entertainment</a></li>
+        </ul>
+    </nav>
+
     <main class="container">
-        <section id="summary" class="section-card hero-section">
-            <h2>Today's Market Overview (<span id="current-date"></span>)</h2>
-            <ul id="summary-list" class="summary-list"></ul>
+
+        <section class="hero">
+            <h2>Top Breaking News</h2>
+            <p>Stay updated with the latest headlines every day.</p>
         </section>
 
-        <section id="news" class="content-section">
-            <h2 class="section-title">Daily Market News</h2>
-            <div id="news-container" class="cards-grid"></div>
+        <section id="news-container" class="news-grid">
+            <!-- News will load here from data.js -->
         </section>
 
-        <section id="insights" class="content-section">
-            <h2 class="section-title">Market Insights</h2>
-            <div id="insights-container" class="cards-grid"></div>
-        </section>
+        <!-- CUSDIS COMMENT SECTION -->
+        <section class="comment-section">
+            <h2>Community Reviews & Comments</h2>
+            <p>Share your thoughts and discuss today's news.</p>
 
-        <section id="notes" class="content-section">
-            <h2 class="section-title">Trader Notes & Warnings</h2>
-            <div id="notes-container" class="notes-grid"></div>
-        </section>
-    </main>
-
-
-    <main class="main-container">
-        <!-- Premium Header Design -->
-        <header class="project-header">
-            <span class="badge">Live Preview</span>
-            <h1>MARKET HUB</h1>
-            <p>A minimalist space for modern web utility. Drop your thoughts to the creator of site, feedback, or custom feature requests down below. </p>
-        </header>
-
-        <!-- Divider -->
-        <div class="glow-divider"></div>
-
-        <!-- Modern Review Architecture -->
-        <section class="review-wrapper">
-            <div class="section-title-block">
-                <h2>Community Feedback</h2>
-                <p>Join the conversation. Spam is automatically filtered.</p>
-            </div>
             
             <!-- Upgraded Cusdis thread container -->
 <div id="cusdis_thread"
