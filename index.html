@@ -51,5 +51,167 @@
 
     <script src="data.js"></script>
     <script src="app.js"></script>
+
+     <main class="main-container">
+        <!-- Premium Header Design -->
+        <header class="project-header">
+            <span class="badge">Live Preview</span>
+            <h1>Project Hub</h1>
+            <p>A minimalist space for modern web utility. Drop your thoughts, feedback, or custom feature requests down below.</p>
+        </header>
+
+        <!-- Divider -->
+        <div class="glow-divider"></div>
+
+        <!-- Modern Review Architecture -->
+        <section class="review-wrapper">
+            <div class="section-title-block">
+                <h2>Community Feedback</h2>
+                <p>Join the conversation. Spam is automatically filtered.</p>
+            </div>
+            
+            <!-- Upgraded Cusdis thread container -->
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="eb56e38a-ca2e-4aca-a9c5-ce0d6c0a13b1"
+  data-page-id="{{ PAGE_ID }}"
+  data-page-url="{{ PAGE_URL }}"
+  data-page-title="{{ PAGE_TITLE }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+        </section>
+        <style>
+/* Modern Reset & CSS Variables */
+:root {
+    --bg-main: #0B0F19;
+    --surface-card: #131A2C;
+    --text-primary: #F3F4F6;
+    --text-muted: #9CA3AF;
+    --accent-electric: #6366F1; /* Modern Indigo */
+    --accent-glow: rgba(99, 102, 241, 0.15);
+    --border-color: rgba(255, 255, 255, 0.06);
+    --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Central Card Layout with Glassmorphism highlights */
+.main-container {
+    width: 100%;
+    max-width: 680px;
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 
+                0 0 50px 0 var(--accent-glow);
+}
+
+/* Header Elements */
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #A5B4FC;
+    background: rgba(99, 102, 241, 0.12);
+    padding: 0.35rem 0.75rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.project-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, #FFFFFF 0%, #C7D2FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Modern Gradient Divider */
+.glow-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
+    margin: 2rem 0;
+}
+
+/* Review Architecture Section */
+.section-title-block {
+    margin-bottom: 1.75rem;
+}
+
+.section-title-block h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.section-title-block p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Custom Overrides for Cusdis Native UI components to blend into dark backgrounds */
+#cusdis_thread {
+    margin-top: 1rem;
+}
+
+/* Clean Responsiveness for Small Displays */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .project-header h1 {
+        font-size: 1.75rem;
+    }
+}
+            </style>
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cusdisThread = document.getElementById('cusdis_thread');
+    
+    if (cusdisThread) {
+        // Automatically isolate dynamic path configurations 
+        cusdisThread.setAttribute('data-page-id', window.location.pathname);
+        cusdisThread.setAttribute('data-page-url', window.location.href);
+        cusdisThread.setAttribute('data-page-title', document.title);
+    }
+});
+                </script>
+    </main>
 </body>
 </html>
