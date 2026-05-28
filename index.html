@@ -46,13 +46,17 @@
         </section>
 
         <!-- CUSDIS COMMENT SECTION -->
-        <section class="comment-section">
-            <h2>Community Reviews & Comments</h2>
-            <p>Share your thoughts and discuss today's news.</p>
+       <section class="comment-section">
 
-            
-            <!-- Upgraded Cusdis thread container -->
-<div id="cusdis_thread"
+    <h2>Community Reviews & Comments</h2>
+
+    <button id="toggleCommentsBtn">
+        Show Comments
+    </button>
+
+    <div id="commentsWrapper" style="display:none; margin-top:20px;">
+
+        <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="eb56e38a-ca2e-4aca-a9c5-ce0d6c0a13b1"
   data-page-id="{{ PAGE_ID }}"
@@ -61,20 +65,29 @@
 ></div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
-        </section>
-        
-            <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const cusdisThread = document.getElementById('cusdis_thread');
-    
-    if (cusdisThread) {
-        // Automatically isolate dynamic path configurations 
-        cusdisThread.setAttribute('data-page-id', window.location.pathname);
-        cusdisThread.setAttribute('data-page-url', window.location.href);
-        cusdisThread.setAttribute('data-page-title', document.title);
+    </div>
+
+</section>
+
+<script>
+const toggleBtn = document.getElementById("toggleCommentsBtn");
+const commentsWrapper = document.getElementById("commentsWrapper");
+
+toggleBtn.addEventListener("click", () => {
+
+    if(commentsWrapper.style.display === "none") {
+
+        commentsWrapper.style.display = "block";
+        toggleBtn.innerHTML = "Show Less";
+
+    } else {
+
+        commentsWrapper.style.display = "none";
+        toggleBtn.innerHTML = "Show Comments";
     }
+
 });
-                </script>
+</script>
     </main>
     <script src="data.js"></script>
     <script src="app.js"></script>
