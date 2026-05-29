@@ -2,8 +2,8 @@ const newsData = [
     {
         title: "Technology is Growing Fast",
         description: "New innovations in AI continue to transform the world.",
-        image: "https://picsum.photos/600/400?1",
-        link: "#"
+        image: "https://picsum.photos/1200/700?1",
+        link: "articles/new1.html"
     },
     {
         title: "Sports Championship Updates",
